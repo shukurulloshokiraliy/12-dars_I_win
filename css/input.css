@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+.dark-body {
+  background-color: rgb(23, 24, 35);
+}
+
+/* Light input */
+.light {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #e2e8f0;
+}
+
+/* Dark input */
+.dark {
+  background-color: #25273d;
+  color: #ffffff;
+  border: 1px solid #4b5563;
+}
+
+.dark-card {
+  background-color: #25273d;
+  color: #c8cbe7;
+}

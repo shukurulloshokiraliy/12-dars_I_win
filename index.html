@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To_Do_list_app 📝</title>
+    <link rel="stylesheet" href="css/output.css" />
+    <link rel="stylesheet" href="css/input.css" /> 
+    <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAMAAAAKE/YAAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAABgUExURfHx+zNIZfTz/dnX/aCgzjVKZ/7+/tfW+////0ZiiPb2/ebm/OTk/NDQ9V9wkUtde3qGp8XG6+bn81Fqjri54aWxyZejv+zt+K6u1YWVstHW5sDH2mp+n7O90trd7j1RbjEA6MsAAAOhSURBVHja7dxrc6sgEAZggk0tbTRGBSpe8v//5UkaTWwErJe4MGd3Jt+fMSDwugP58LAIohGNaEQjGtGIRjSiEY1oRCMa0YhGNKI9Rb9/kgl1CH9V0EgI9DslC9Bh/p1uj55oHqLf1lJPQH+Spei11NuiV1KTF81CA3od9dboVdSbo9dQb49eQQ2AXq6GQC9Wg6CXqmHQC9VA6GVqKPQiNRh6iRoOvUANiJ6vhkTPVoOi56ph0TPVwOh5amj0LDU4eo4aHj1D7QB6utoF9GT1dujg9LaWesMnHX2vpd4QHVoe9TT1lmjLqJ6m3hQdnnLzEMk/HUUHYWQu6Si6z//9u9SX82hNHd4RjWhEI9ojNKWEeodWXPDGM3QdM8Yq5RW6zti1CukRujWzWFFv0J2ZZf6g72ZWpY4PjzSV9Mmc1f2JGBgLCp3yqirKJzPvvfKC6GSqaMjeBC2Ln3lXG8zkEIn4aKqsiAIANC2zdjzozeQgzjtz7ZMIAs07qd5M1XG3N9funAeAaKY1X/6J895aAgKtMpv5it5Z0W8BxNuDZxYzIU1sHR7HEwha9tUDMznk2d48EY88AFpceGY2k0NwEompihxuGe/UGvN1cbEV4N7jptaZHd4wSR7fVkW/zohNWTb+HWwpxQgB0YhG9EI0pf7FYk3Ny9QzdFldVvSk8Qpdxv7FYq2ZxY0/sVhn9ikWu5v7sZjlA20Itp+mUrbR/8PM+GMifiexqSoOhJZ1kQj1ZBbyjuZHS1hzLmBiMfEz70pKtWbSZPbTOEhY08Zicak3uxnWdAlTrDU7jmZas6PD4zkWezKPTUQBOBGN5ssrL3fxlSdsZlcXl756YHZ2GX+oh2Z39x6dWmN2ORYT2TXKk56dERXnyruDLaWGXAwjBERjWAOClqpU0i80VUnGMpH6hKaqui2OHqE7M4sbb9B3s0dhzcPcf9Larp+2Ux0urOnaNHvm3ph28jOzVELU6ZO5SP/2QR/ojHj7xJwoqjePtk5AnsYr9ctM/9qksisgc49Kax4Na2DRTGsea7zanzlglmcwj7W47aoIJKwprOaxZsITTDtQWtjMI22bIUzbJqF99cDsaINsXz00O7v3uKs1Znc3TK1aZ3Z5l5fWRVFL78IaQjCsQTSiEY1oRP9H6I9Xo19xrcDL0eQV6KV39a42Ora8FXnE/PfrPTa8f9pawdcEM15PjmhEIxrRiEY0ohGNaEQjGtGIRjSiEe1S/QNcKFWnwWkF6wAAAFd6VFh0UmF3IHByb2ZpbGUgdHlwZSBpcHRjAAB4nOPyDAhxVigoyk/LzEnlUgADIwsuYwsTIxNLkxQDEyBEgDTDZAMjs1Qgy9jUyMTMxBzEB8uASKBKLgDqFxF08kI1lQAAAABJRU5ErkJggg=="
+  />
+  </head>
+  <body class="light-body bg-gray-50 dark:bg-gray-900 min-h-screen transition-colors">
+    <!-- HEADER -->
+    <div
+      id="Header"
+      class="bg-[url('../images/light_mode.svg')] dark:bg-[url('../images/night_mode.svg')]
+             bg-no-repeat bg-cover w-full h-[300px] flex flex-col items-center justify-center transition-all"
+    >
+      <div class="flex w-full max-w-[561px] items-center justify-between px-5 mb-7">
+        <a href="index.html">
+          <img src="./images/logo.svg" alt="To do app logo" width="167" height="40"/>
+        </a>
+        <button id="switchBtn" class="p-3 rounded hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+          <img id="lightIcon" src="./images/night_button.svg" alt="switch theme" class="w-6 h-6"/>
+        </button>
+      </div>
+
+      <!-- FORM -->
+      <form id="todoForm" class="w-full max-w-[561px] px-5">
+        <div class="relative">
+          <input
+            id="todoInput"
+            type="text"
+            placeholder="Create a new todo name..."
+            class="w-full h-[64px] rounded-[5px] pl-[72px] pr-6 py-5 
+                   bg-white dark:bg-dark-card-color
+                   text-gray-900 dark:text-white
+                   placeholder:text-gray-400 dark:placeholder:text-gray-500
+                   shadow-md focus:outline-none
+                   bg-[url('../images/Oval.svg')] dark:bg-[url('../images/Oval_dark.svg')] 
+                   bg-no-repeat bg-[left_24px_center] transition-colors"
+          />
+        </div>
+        <div class="w-full mt-4">
+          <textarea
+            id="todoInputdes"
+            rows="4"
+            class="w-full h-20 p-3 text-sm rounded-lg border border-gray-300
+                   text-gray-900 bg-white
+                   dark:bg-gray-700 dark:text-white dark:border-gray-600
+                   shadow-md focus:outline-none"
+            placeholder="Todo uchun izoh yozing..."
+          ></textarea>
+        </div>
+        <div class="flex w-full justify-end items-center gap-3 pt-3">
+          <button type="reset" class="px-5 py-2.5 rounded-lg bg-purple-400 dark:bg-gray-600 text-gray-700 dark:text-white hover:bg-gray-300 dark:hover:bg-gray-500 transition">
+            Tozalash
+          </button>
+          <button id="editAddButton" type="submit" class="px-5 py-2.5 rounded-lg bg-blue-500 text-white hover:bg-blue-700 transition">
+            Tasdiqlash
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- CARDS -->
+    <div id="cards" class="grid gap-4 mx-auto w-full max-w-[561px] px-5 mt-6"></div>
+
+
+    <!-- TEMPLATE -->
+    <template id="cardTemplate">
+      <div class="card bg-white dark:bg-dark-card-color rounded-lg shadow-sm flex items-center gap-4 w-full h-[94px] px-4 transition-colors" data-status="active">
+        <input type="checkbox" class="w-6 h-6 appearance-none rounded-full 
+               bg-[url('../images/Oval.svg')] dark:bg-[url('../images/Oval_dark.svg')] 
+               bg-no-repeat bg-center cursor-pointer transition-all"/>
+        <div class="title flex flex-col flex-1 overflow-hidden">
+          <h5 class="text-lg font-semibold truncate text-gray-600 dark:text-white">Todo title...</h5>
+          <p class="text-sm text-gray-500 dark:text-gray-400 truncate">Todo description...</p>
+        </div>
+        <div class="buttons flex gap-3">
+          <button title="Ko'rish" class="see"><img id="mode_see" src="./images/eye.svg" alt="" class="w-5 h-5"></button>
+          <button  class="edit"><img id="mode_edit" src="./images/pen-clip.svg" alt="" class="w-5 h-5"></button>
+          <button class="delete hidden"><img src="./images/x-light.svg" alt="" class="w-5 h-5"></button>
+        </div>
+      </div>
+    </template>
+        <!-- Tabs -->
+        <ul class="flex justify-center gap-6 mt-6 text-sm font-medium text-gray-500 dark:text-gray-400 ">
+          <h4 id="itemsLeft" class="font-semibold">0 items</h4>
+          <li><button id="all-tab" class="text-blue-600">All</button></li>
+          <li><button id="active-tab">Active</button></li>
+          <li><button id="completed-tab">Completed</button></li>
+          <li><button id="completed-clear" class="text-blue-300">Clear</button></li>
+        </ul>
+    
+
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>
